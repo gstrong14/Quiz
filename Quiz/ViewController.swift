@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Quiz
 //
-//  Created by Graham  b Strong on 1/18/17.
+//  Created by Graham  Strong on 1/18/17.
 //  Copyright © 2017 Graham Strong. All rights reserved.
 //
 

@@ -21,17 +21,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7I-3e-BaS">
-                                <rect key="frame" x="164" y="248" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7I-3e-BaS">
+                                <rect key="frame" x="139" y="197" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tba-v3-o1Q"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-Ia-ucD">
+                                <rect key="frame" x="175" y="278" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ale-af-ZKc">
+                                <rect key="frame" x="141" y="325" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pz0-0P-8DR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ay-Jy-CTu">
+                                <rect key="frame" x="175" y="140" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ale-af-ZKc" firstAttribute="centerX" secondItem="5ay-Jy-CTu" secondAttribute="centerX" id="05X-Zv-cVX"/>
+                            <constraint firstItem="b0V-Ia-ucD" firstAttribute="top" secondItem="t7I-3e-BaS" secondAttribute="bottom" constant="51" id="3w1-6g-t6x"/>
+                            <constraint firstItem="b0V-Ia-ucD" firstAttribute="centerX" secondItem="5ay-Jy-CTu" secondAttribute="centerX" id="4yz-J8-e9S"/>
+                            <constraint firstItem="5ay-Jy-CTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HB7-9Q-mdn"/>
+                            <constraint firstItem="ale-af-ZKc" firstAttribute="top" secondItem="b0V-Ia-ucD" secondAttribute="bottom" constant="26" id="I3n-2j-z2a"/>
+                            <constraint firstItem="t7I-3e-BaS" firstAttribute="centerX" secondItem="5ay-Jy-CTu" secondAttribute="centerX" id="ST4-fW-wuj"/>
+                            <constraint firstItem="5ay-Jy-CTu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="XGF-ad-AGB"/>
+                            <constraint firstItem="t7I-3e-BaS" firstAttribute="top" secondItem="5ay-Jy-CTu" secondAttribute="bottom" constant="36" id="skz-0I-99t"/>
+                            <constraint firstItem="b0V-Ia-ucD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjm-vo-JEK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="b0V-Ia-ucD" id="2cq-xZ-RGH"/>
+                        <outlet property="questionLabel" destination="5ay-Jy-CTu" id="MjJ-hQ-6tz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>
